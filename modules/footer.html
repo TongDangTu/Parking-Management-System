@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../bootstrap.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <title>ADEPRO</title>
+  </head>
+
+  <body>
+    <style>
+      :root {
+        --header-text-color: #efd841;
+        --border-color: rgb(26, 27, 27);
+        --header-color: #353030;
+        --link-color: rgb(232, 228, 186);
+        --search-bar-color: #c5c48d;
+        --footer-bottom-color: #1e1c1c;
+      }
+      /* footer */
+
+      footer {
+        position: relative;
+        bottom: 0;
+        /* position: absolute;
+  bottom: 0; */
+        background: var(--header-color);
+        /* height: 200px; */
+        width: 100%;
+        /* padding-top: 40px; */
+        color: #fff;
+        display: flex;
+        flex-flow: column nowrap;
+        /* justify-content: space-between; */
+      }
+
+      .row {
+      }
+
+      .footer-logo {
+        width: 90%;
+        height: 30%;
+        border-radius: 5px;
+        opacity: 70%;
+      }
+
+      .footer-logo-side {
+        max-width: 30vw;
+        margin: auto;
+        margin-right: 30px;
+      }
+
+      .footer-quick-link {
+        max-width: 30vw;
+        background-color: var(--header-color);
+        padding-top: 20px;
+      }
+
+      .footer-quick-link h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 14px;
+      }
+
+      li a:first-of-type {
+        padding-left: 0;
+      }
+
+      .socials {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+        /* justify-content: center; */
+        margin-top: 20px;
+      }
+
+      .socials li {
+        margin: 20px 5px;
+        list-style-type: none;
+      }
+
+      li a {
+        padding: 20px;
+      }
+
+      .socials a,
+      .footer-quick-link a {
+        text-decoration: none;
+        color: var(--link-color);
+        border-radius: 50%;
+      }
+
+      .socials a i {
+        font-size: 2rem;
+        transition: color 0.4s ease;
+        color: #fff !important;
+      }
+
+      .socials a:hover i {
+        color: aqua;
+      }
+
+      .footer-bottom {
+        background: var(--footer-bottom-color);
+        width: 100%;
+        bottom: 0;
+      }
+
+      .footer-bottom p {
+        float: left;
+        font-size: 14px;
+        word-spacing: 2px;
+        text-align: center;
+        margin-left: 500px;
+      }
+
+      .footer-bottom p a {
+        color: #44bae8;
+        font-size: 16px;
+        text-decoration: none;
+      }
+
+      .footer-bottom span {
+        text-transform: uppercase;
+        opacity: 0.4;
+        font-weight: 200;
+      }
+    </style>
+    <footer>
+      <div
+        class="row"
+        style="display: grid; grid-template-columns: repeat(3, 1fr)"
+      >
+        <div class="footer-logo-side">
+          <a class="nav-brand" href="/DoAnWeb/modules/header-navbar/redirect-home.php">
+            <img
+              class="footer-logo"
+              src="https://raw.githubusercontent.com/Tamashi-Dake/DoAnWeb/main/img/footer%20logo.png"
+              alt="logo"
+            />
+          </a>
+        </div>
+        <div class="footer-quick-link">
+          <h3>Mạng xã hội</h3>
+          <ul class="socials">
+            <li>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-google-plus"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-linkedin-square"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-quick-link">
+          <h3>Thông tin chung</h3>
+          <a target="_blank" href="#">
+            <p>About us</p>
+          </a>
+          <a target="_blank" href="#">
+            <p>Liên hệ</p>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          Copyright &copy;<span id="year"></span>
+          <a href="# ">All rights reserved</a>
+        </p>
+      </div>
+    </footer>
+    <script>
+      const d = new Date();
+      let year = d.getFullYear();
+      document.getElementById("year").innerHTML = year;
+    </script>
+  </body>
+</html>
